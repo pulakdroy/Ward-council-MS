@@ -1,0 +1,129 @@
+
+summary {
+    background-color: #7fa6d8;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  /* Style for the content inside the details */
+  details > div {
+    background-color: #c6dbe3;
+    padding: 10px;
+  }
+  details {
+    margin-bottom: 10px;
+  }
+
+
+.people-info {
+    max-width: 60%;
+}
+
+.people-info h1 {
+    margin: 0;
+}
+
+/*  Picture */
+img {
+    max-width: 500px;
+    height: 50px;
+    /* border-radius: 50%; For circular images */
+}
+
+
+
+
+
+/*  Profile Content Section */
+.profile-content {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+/* Profile Navigation*/
+.profile-navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+} 
+
+.profile-navigation li {
+    margin-right: 20px;
+}
+
+.profile-navigation a {
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
+} 
+
+/* Profile Sections */
+.profile-section {
+    margin-top: 20px;
+}
+
+.profile-section h2 {
+    color: #2e86de;
+}
+
+
+.service {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+#searchInput {
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 25%;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+.search-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+.people-profile {
+    flex: 0 0 calc(25% - 20px); /* Each profile takes 25% width with some margin */
+    margin: 10px;
+    border: 1px solid #3498db;
+    border-radius: 8px;
+    background-color: #ecf0f1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+.people-profile:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+h2 {
+    color: #2e86de;
+    margin-bottom: 10px;
+}
+p {
+    margin-bottom: 15px;
+    color: #555;
+}
+strong {
+    color: #2e86de;
+}
+img {
+    max-width: 100%;
+    height: 25vh;
+}
+.people-profile a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+}
+.people-profile a:hover {
+    text-decoration: none;
+}
