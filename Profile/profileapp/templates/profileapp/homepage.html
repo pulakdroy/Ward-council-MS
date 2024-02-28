@@ -1,0 +1,105 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'css/homepage.css' %}">
+    
+    <!-- Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="homepage.html">
+            <img src="images/logo.png" width="120" height="60" class="d-inline-block align-top" alt="">
+            Ward Council Management
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="homepage.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'login' %}">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">Ward Council</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">Police Station</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Complain Box
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="">To Ward Councilor Office</a>
+                        <a class="dropdown-item" href="#">Police Station</a>
+                        <a class="dropdown-item" href="#">Admin</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        More
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="">Feedback</a>
+                        <a class="dropdown-item" href="#">About us</a>
+                        <a class="dropdown-item" href="#">Contact</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <section class="service">
+        <input type="text" id="searchInput" oninput="filterPeople()" placeholder="Search">
+        <div id="searchNote"></div>
+
+        <div class="people-container">
+            <!-- Ward councilor profile -->
+            <div class="people" id="councilor">
+                <a href="councilor.html">
+                    <img src="images/wardcouncilor.jpg" alt="Council">
+                    <h2>Kevin spacey</h2>
+                    <p>Ward Councilor</p>
+
+                </a>
+            </div>
+        
+            <!-- Office in Change -->
+            <div class="people" id="OC">
+                <a href="OC.html">
+                    <img src="images/oc.jpg" alt="OC">
+                    <h2>Raymond Holt</h2>
+                    <p>Office in charge</p>
+
+                </a>
+            </div>
+        
+ 
+        
+        </div>
+
+
+    </section>
+
+    <!-- Bootstrap JS and jQuery scripts -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>

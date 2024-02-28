@@ -1,0 +1,80 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+
+    <title>Profile</title>
+  </head>
+  <body>
+
+    <header>
+        <nav class="navbar">
+            <a href="{% url 'home' %}" class="logo">Profile</a>
+                <a class="profile-icon-link-container" href="{% url 'logout' %}">
+                    <div class="header-logout">Logout</div>
+                </a>
+        </nav>
+    </header>
+
+    <main class="main-container">
+            <form class = 'container' action="" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="profile-photo-container profile-photo-form-container">
+                    <p class="profile-page-heading">Edit your profile</p>
+                    <img src="{{user.profile.profile_img.url}}" alt="user-image" width="" srcset="">
+                    {{form.profile_img}}
+
+                </div>
+            
+
+                <div class="user-content-container user-profile-form-container">
+                    <ul>
+                        <li class="name">
+                            <label for="user-name">Your Name</label>
+                            <!-- <input type="text" name="" id="user-name" class="user-name-input" placeholder="Your Name"> -->
+                            {{form.name}}
+                        </li>
+                        <li class="title">
+                            <label for="user-title">Your title</label>
+                            <!-- <input type="text" name="" id="user-title" class="user-title-input" placeholder="Your Title"> -->
+                            {{form.title}}
+                        </li>
+                        <li class="desc">
+                            <label for="user-desc">Description</label>
+                            <!-- <input type="text" name="" id="user-desc" class="user-desc-input" placeholder="Description"> -->
+                            {{form.desc}}
+                        </li>
+                    </ul>
+                    <button class="profile-save-button"> Save </button>
+                    
+    
+                </div>
+                
+            </form>
+            
+            <p class="profile-delete-button">Want to delete your account?? <a href="{% url 'delete_account' %}"> Delete </a></p>
+    </main>
+
+    <script>
+
+    var id_name = document.getElementById('id_name')
+    var id_title = document.getElementById('id_title')
+    var id_desc = document.getElementById('id_desc')
+    id_name.placeholder = 'Your Name'
+    id_title.placeholder = 'Your Title'
+    id_desc.placeholder = 'Description'
+
+    </script>
+
+  </body>
+</html
