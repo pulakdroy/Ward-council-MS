@@ -13,13 +13,13 @@ from django.contrib.auth.models import User
 
 # Create your views here.
 
-@login_required(login_url='login')
+
 def index(request):
-    return render(request, 'profileapp/home.html')
-
-
-def homepage(request):
     return render(request, 'profileapp/homepage.html')
+
+
+def home(request):
+    return render(request, 'profileapp/home.html')
 
 
 @login_required(login_url='login')
@@ -54,7 +54,7 @@ def login_user(request):
         if user is not None:
             login(request, user)
             messages.info(request, f'{username}, You are logged in.')
-            return redirect('/')
+            return redirect('home')
         else:
             messages.info(request, 'Invalid username or password.')
             return redirect('login')
@@ -89,4 +89,19 @@ def logout_user(request):
     messages.info(request, 'You have logged out successfully')
     return redirect('login')
 
+
+def councilor(request):
+    return render(request, 'profileapp/councilor.html')
+
+def oc(request):
+    return render(request, 'profileapp/oc.html')
+
+def police_service(request):
+    return render(request, 'profileapp/police-service.html')
+
+def police(request):
+    return render(request, 'profileapp/police.html')
+
+def police_complain(request):
+    return render(request, 'profileapp/police-complain.html')
 

@@ -1,31 +1,17 @@
 {% load static %}
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Police Complain</title>
+    <link rel="stylesheet" href="{% static 'css/police-service.css' %}">
     
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="{% static 'css/home.css' %}">
-    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+    <!-- Bootstrap CSS link -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-
-    <title>Profile</title>
-  </head>
-  <body>
-
-    <!-- <header>
-        <nav class="navbar">
-            <a href="{% url 'home' %}" class="logo">Profile</a>
-                <a class="profile-icon-link-container" href="{% url 'logout' %}">
-                    <div class="header-logout">Logout</div>
-                </a>
-        </nav>
-    </header> -->
+</head>
+<body>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="{% url 'homepage' %}">
@@ -83,62 +69,56 @@
                         <a class="dropdown-item" href="#">Contact</a>
                     </div>
                 </li>
-                <a class="profile-icon-link-container" href="{% url 'logout' %}">
-                    <div class="header-logout">Logout</div>
-                </a>
             </ul>
         </div>
     </nav>
 
-    <main class="main-container">
-            <form class = 'container' action="" method="POST" enctype="multipart/form-data">
-                {% csrf_token %}
-                <div class="profile-photo-container profile-photo-form-container">
-                    <p class="profile-page-heading">Edit your profile</p>
-                    <img src="{{user.profile.profile_img.url}}" alt="user-image" width="" srcset="">
-                    {{form.profile_img}}
+    <header>
+        <h1>Submit Complaint to Police</h1>
+    </header>
 
-                </div>
-            
-
-                <div class="user-content-container user-profile-form-container">
-                    <ul>
-                        <li class="name">
-                            <label for="user-name">Your Name</label>
-                            <!-- <input type="text" name="" id="user-name" class="user-name-input" placeholder="Your Name"> -->
-                            {{form.name}}
-                        </li>
-                        <li class="title">
-                            <label for="user-title">Your title</label>
-                            <!-- <input type="text" name="" id="user-title" class="user-title-input" placeholder="Your Title"> -->
-                            {{form.title}}
-                        </li>
-                        <li class="desc">
-                            <label for="user-desc">Description</label>
-                            <!-- <input type="text" name="" id="user-desc" class="user-desc-input" placeholder="Description"> -->
-                            {{form.desc}}
-                        </li>
-                    </ul>
-                    <button class="profile-save-button"> Save </button>
-                    
-    
-                </div>
-                
+    <main>
+        <section class="form">
+            <form action="" method="POST">
+                <!-- {% csrf_token %} -->
+                <label for="complainant_name">Your Name:</label>
+                <input type="text" id="complainant_name" name="complainant_name" required>
+                <br>
+                <label for="contact_number">Contact number:</label>
+                <input type="text" id="contact_number" name="contact_number" required>
+                <br>
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+                <br>
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+                <br>
+                <label for="complaint_text">Complaint:</label>
+                <textarea id="complaint_text" name="complaint_text" required></textarea>
+                <br>
+                <button type="submit">Submit</button>
             </form>
-            
-            <p class="profile-delete-button">Want to delete your account?? <a href="{% url 'delete_account' %}"> Delete </a></p>
+        </section>
     </main>
 
-    <script>
+    <br>
+    <br>
+    <br>
+    <br>
 
-    var id_name = document.getElementById('id_name')
-    var id_title = document.getElementById('id_title')
-    var id_desc = document.getElementById('id_desc')
-    id_name.placeholder = 'Your Name'
-    id_title.placeholder = 'Your Title'
-    id_desc.placeholder = 'Description'
+    <footer>
+        <p>&copy; 2024 All Rights Reserved</p>
+    </footer>
 
-    </script>
 
-  </body>
-</html
+
+
+
+
+
+    
+
+
+
+</body>
+</html>

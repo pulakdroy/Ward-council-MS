@@ -11,11 +11,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
     <title>Home</title>
   </head>
   <body>
-    <header>
+    <!-- <header>
         <nav class="navbar">
             <p class="logo">Profile</p>
                 <a class="profile-icon-link-container" href="{% url 'profile' %}">
@@ -23,7 +25,75 @@
                     <span class="header-username">Hello, {{user}}</span>
                 </a>
         </nav>
-    </header>
+    </header> -->
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="{% url 'homepage' %}">
+            <img src="{% static 'images/logo.png' %}" width="120" height="60" class="d-inline-block align-top" alt="">
+            Ward Council Management
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'homepage' %}">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'login' %}">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">Ward Council</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'police' %}">Police Station</a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Complain Box
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="">To Ward Councilor Office</a>
+                        <a class="dropdown-item" href="#">Police Station</a>
+                        <a class="dropdown-item" href="#">Admin</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Forms
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="">Councilor Office forms</a>
+                        <a class="dropdown-item" href="{% url 'police_service' %}">Police forms</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        More
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="">Feedback</a>
+                        <a class="dropdown-item" href="#">About us</a>
+                        <a class="dropdown-item" href="#">Contact</a>
+                    </div>
+                </li>
+                <a class="profile-icon-link-container" href="{% url 'profile' %}">
+                    <img src="{% static 'images/default.svg' %}" alt="profile-icon">
+                    <span class="header-username">Hello, {{user}}</span>
+                </a>
+            </ul>
+        </div>
+    </nav>
+    
+
+
 
     {% if messages %}
     <div class="notification-container">

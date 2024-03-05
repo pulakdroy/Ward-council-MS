@@ -5,8 +5,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="{% static 'css/homepage.css' %}">
+    <title>Police Service</title>
+    <link rel="stylesheet" href="{% static 'css/police-service.css' %}">
     
     <!-- Bootstrap CSS link -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -44,18 +44,8 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="">To Ward Councilor Office</a>
-                        <a class="dropdown-item" href="{% url 'police_complain' %}">Police Station</a>
+                        <a class="dropdown-item" href="#">Police Station</a>
                         <a class="dropdown-item" href="#">Admin</a>
-                    </div>
-                </li>
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Forms
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="">To Ward Councilor Office</a>
-                        <a class="dropdown-item" href="{% url 'police_service' %}">Police forms</a>
                     </div>
                 </li>
 
@@ -74,42 +64,40 @@
     </nav>
 
 
-    <section class="service">
-        <input type="text" id="searchInput" oninput="filterPeople()" placeholder="Search">
-        <div id="searchNote"></div>
 
-        <div class="people-container">
-            <!-- Ward councilor profile -->
-            <div class="people" id="councilor">
-                <a href="councilor.html">
-                    <img src="{% static 'images/wardcouncilor.jpg' %}" alt="Council">
-                    <h2>Kevin spacey</h2>
-                    <p>Ward Councilor</p>
+    <header>
+        <h1>Police Service Forms</h1>
+    </header>
 
-                </a>
-            </div>
-        
-            <!-- Office in Change -->
-            <div class="people" id="OC">
-                <a href="OC.html">
-                    <img src="{% static 'images/oc.jpg' %}" alt="OC">
-                    <h2>Raymond Holt</h2>
-                    <p>Office in charge</p>
+    <main>
+        <section class="form">
+            <h2>New resident form</h2>
+            <p>Description: People who newly shifted to this area please fill up this form</p>
+            <a href="{% static 'forms/Tenant-Registration-Form.pdf' %}" download>Download Form</a>
+        </section>
 
-                </a>
-            </div>
-        
- 
-        
-        </div>
+        <section class="form">
+            <h2>Character certificate form</h2>
+            <p>Description: To apply for a character certificate fill up this form</p>
+            <a href="{% static 'forms/NOC-Format.pdf' %}" download>Download Form</a>
+        </section>
 
+        <section class="form">
+            <h2>GD form</h2>
+            <p>Description: To file a general diary fill up this form</p>
+            <a href="{% static 'forms/GD-Form.pdf' %}" download>Download Form</a>
+        </section>
 
-    </section>
+    </main>
 
-    <!-- Bootstrap JS and jQuery scripts -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <footer>
+        <p>&copy; 2024 All Rights Reserved</p>
+    </footer>
 
 </body>
 </html>
