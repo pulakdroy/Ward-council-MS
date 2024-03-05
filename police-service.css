@@ -110,20 +110,4 @@ p {
     margin-bottom: 15px;
     color: #555;
 }
-strong {
-    color: #2e86de;
-}
-img {
-    max-width: 100%;
-    height: 25vh;
-}
-.people-profile a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    text-decoration: none;
-}
-.people-profile a:hover {
-    text-decoration: none;
-}
+
