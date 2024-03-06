@@ -5,10 +5,12 @@ from django.contrib.auth.models import User
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    name = models.CharField(default='User (Default)', max_length=200, null=True)
-    title = models.CharField(default="Please give your name and other info from the below 'Edit' option.", max_length=200, null=True)
-    desc_text = 'Hey there, nice to meet you.'
-    desc = models.CharField(default = desc_text, max_length=200, null=True)
+    name = models.CharField(default='', max_length=200, null=True)
+    number = models.CharField(default="", max_length=200, null=True)
+    nid = models.CharField(default="", max_length=200, null=True)
+    dob = models.CharField(default="dd-mm-yy", max_length=200, null=True)
+    # desc_text = 'Enter your address'
+    desc = models.CharField(default = '', max_length=200, null=True)
     profile_img = models.ImageField(default='media/default.jpg', upload_to='media', null='True', blank=True)
 
 

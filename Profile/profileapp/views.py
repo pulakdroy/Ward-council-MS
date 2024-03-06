@@ -30,7 +30,7 @@ def profile(request):
             form.save()
             username = request.user.username
             messages.success(request, f'{username}, Your profile is updated succesfully')
-            return redirect('/')
+            return redirect('home')
     else:
         form = ProfileForm(instance=request.user.profile)
 
