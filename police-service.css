@@ -1,0 +1,74 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* Light gray background */
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 20px;
+}
+.form {
+    flex: 1;
+    margin-right: 20px;
+    background-color: #fff; /* White background for form */
+    padding: 20px;
+    border-radius: 5px;
+}
+.emergency {
+    flex: 0 0 250px; /* Fixed width for emergency section */
+    background-color: #f44336; /* Red background for emergency section */
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+}
+.emergency h2 {
+    margin-top: 0;
+}
+.emergency p {
+    margin-bottom: 0;
+}
+
+.language-selector {
+    margin: 10px;
+}
+
+.navbar {
+    background-color: #343a40 !important;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer {
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Form Section Styles */
+.form {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.form h2 {
+    margin-bottom: 10px;
+}
+
+.form p {
+    margin-bottom: 20px;
+}
+
+.form a {
+    display: block;
+    margin-top: 10px;
+}
+

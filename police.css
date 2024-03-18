@@ -6,18 +6,6 @@ summary {
     font-size: 16px;
   }
 
-  /* Existing styles for modal content */
-.modal-content {
-    background-color: #c6dbe3; /* Default background color */
-    padding: 15px;
-    border-radius: 10px;
-}
-
-/* New style to change background color to red */
-#emergencyModal .modal-content {
-    background-color: #ff9999; /* Red background color */
-}
-
   /* Style for the content inside the details */
   details > div {
     background-color: #c6dbe3;
@@ -42,6 +30,9 @@ img {
     height: 50px;
     /* border-radius: 50%; For circular images */
 }
+
+
+
 
 
 /*  Profile Content Section */

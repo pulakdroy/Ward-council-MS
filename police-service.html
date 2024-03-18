@@ -3,18 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="OC.css">
-    <title>Raymond Holt</title>
+    <title>PoliceService</title>
+    <link rel="stylesheet" href="police-service.css">
     
     <!-- Bootstrap CSS link -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
 <body>
 
+        <!-- Language Selector -->
+    <div class="language-selector">
+        <label for="language">Select Language:</label>
+        <select id="language">
+            <option value="english">English</option>
+            <option value="bangla">বাংলা</option>
+        </select>
+    </div>
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="homepage.html">
-            <img src="images/logo.png" width="120" height="=80" class="d-inline-block align-top" alt="">
-            Officer in Charge
+            <img src="images/logo.png" width="120" height="60" class="d-inline-block align-top" alt="">
+            Ward Council Management
         </a>
 
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,10 +46,10 @@
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Complain Box
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink1">
                         <a class="dropdown-item" href="">To Ward Councilor Office</a>
                         <a class="dropdown-item" href="police-complain.html">Police Station</a>
                         <a class="dropdown-item" href="#">Admin</a>
@@ -48,21 +57,21 @@
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Forms
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink2">
                         <a class="dropdown-item" href="">To Ward Councilor Office</a>
                         <a class="dropdown-item" href="police-service.html">Police forms</a>
                     </div>
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         More
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="">Feedback</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink3">
+                        <a class="dropdown-item" href="#">Feedback</a>
                         <a class="dropdown-item" href="#">About us</a>
                         <a class="dropdown-item" href="#">Contact</a>
                     </div>
@@ -71,44 +80,50 @@
         </div>
     </nav>
 
+
+
+
+
     <header>
-        <!-- OC Picture -->
-        <img src="images/oc.jpg" alt="Raymond Holt">
-    
-        <!-- OC Information -->
-        <div class="people-info">
-            <h1>Raymond Holt</h1>
-            <br>
-            <p>Position: Officer in Charge</p>
-            <p>Office: Police station, Dhaka</p>
-            <p>Contact info: 123456789</p>
-            <a href="mailto:email@example.com">Send Email</a>
-        </div>
-    
- 
+        <h1>Police Service Forms</h1>
     </header>
-    
-    <!-- OC Profile Content Section -->
-    <section class="profile-content">
-        <p>As the Officer in Charge at the Police station in Dhaka, he leads with a firm yet compassionate hand, ensuring that every case is meticulously investigated and every citizen is treated with respect and fairness.</p>
 
-        <p>With years of experience under his belt, Officer Holt has earned the trust and respect of his colleagues and the community alike. His calm demeanor and sharp intellect make him a formidable force against crime, and his commitment to serving and protecting is unwavering.</p>
+    <main>
+        <section class="form">
+            <h2 id="new_resident_form_title">New resident form</h2>
+            <p id="new_resident_form_description">Description: People who newly shifted to this area please fill up this form</p>
+            <a href="forms/Tenant-Registration-Form.pdf" download id="download_button">Download Form</a>
+        </section>
 
-        <p>Outside of his duties, Officer Holt is known for his dry wit and penchant for sudoku puzzles. Don't let his serious facade fool you; he's always ready with a clever quip or a thoughtful piece of advice.</p>
+        <section class="form">
+            <h2 id="character_certificate_form_title">Character certificate form</h2>
+            <p id="character_certificate_form_description">Description: To apply for a character certificate fill up this form</p>
+            <a href="forms/NOC-Format.pdf" download id="download_button">Download Form</a>
+        </section>
 
-        <p>Whether you're in need of assistance or simply want to say hello, Officer Raymond Holt is here to serve. Feel free to contact him at the Police station or drop him an email at <a href="mailto:raymond.holt@police.com">raymond.holt@police.com</a>. Your safety and well-being are his top priorities.</p>
+        <section class="form">
+            <h2 id="gd_form_title">GD form</h2>
+            <p id="gd_form_description">Description: To file a general diary fill up this form</p>
+            <a href="forms/GD-Form.pdf" download id="download_button">Download Form</a>
+        </section>
 
-      
-        
-       
-    </section>
+    </main>
 
-        <!-- Bootstrap JS and jQuery scripts -->
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <footer>
+        <p>&copy; 2024 All Rights Reserved</p>
+    </footer>
+
+    <!-- Bootstrap JS and jQuery scripts -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
- 
-
+    <!-- JavaScript for Language Translation -->
+    <script src="translation.js"></script>
 </body>
 </html>
