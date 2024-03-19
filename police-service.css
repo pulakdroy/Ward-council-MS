@@ -1,113 +1,74 @@
 
-summary {
-    background-color: #7fa6d8;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 16px;
-  }
-
-  /* Style for the content inside the details */
-  details > div {
-    background-color: #c6dbe3;
-    padding: 10px;
-  }
-  details {
-    margin-bottom: 10px;
-  }
-
-
-.people-info {
-    max-width: 60%;
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* Light gray background */
 }
-
-.people-info h1 {
-    margin: 0;
-}
-
-/*  Picture */
-img {
-    max-width: 500px;
-    height: 50px;
-    /* border-radius: 50%; For circular images */
-}
-
-
-
-
-
-/*  Profile Content Section */
-.profile-content {
-    max-width: 800px;
-    margin: 20px auto;
-}
-
-/* Profile Navigation*/
-.profile-navigation ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.container {
     display: flex;
-} 
-
-.profile-navigation li {
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 20px;
+}
+.form {
+    flex: 1;
     margin-right: 20px;
+    background-color: #fff; /* White background for form */
+    padding: 20px;
+    border-radius: 5px;
+}
+.emergency {
+    flex: 0 0 250px; /* Fixed width for emergency section */
+    background-color: #f44336; /* Red background for emergency section */
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+}
+.emergency h2 {
+    margin-top: 0;
+}
+.emergency p {
+    margin-bottom: 0;
 }
 
-.profile-navigation a {
-    text-decoration: none;
-    color: #3498db;
-    font-weight: bold;
-} 
-
-/* Profile Sections */
-.profile-section {
-    margin-top: 20px;
-}
-
-.profile-section h2 {
-    color: #2e86de;
-}
-
-
-.service {
-    width: 80%;
-    margin: auto;
-    text-align: center;
-    padding-top: 100px;
-}
-#searchInput {
-    padding: 10px;
-    margin-bottom: 20px;
-    width: 25%;
-    box-sizing: border-box;
-    font-size: 16px;
-}
-.search-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-
-.people-profile {
-    flex: 0 0 calc(25% - 20px); /* Each profile takes 25% width with some margin */
+.language-selector {
     margin: 10px;
-    border: 1px solid #3498db;
+}
+
+.navbar {
+    background-color: #343a40 !important;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer {
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Form Section Styles */
+.form {
+    background-color: #fff;
     border-radius: 8px;
-    background-color: #ecf0f1;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    transition: box-shadow 0.3s ease-in-out;
-}
-.people-profile:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-h2 {
-    color: #2e86de;
-    margin-bottom: 10px;
-}
-p {
-    margin-bottom: 15px;
-    color: #555;
+    margin-bottom: 20px;
 }
 
+.form h2 {
+    margin-bottom: 10px;
+}
+
+.form p {
+    margin-bottom: 20px;
+}
+
+.form a {
+    display: block;
+    margin-top: 10px;
+}
