@@ -14,6 +14,20 @@
     <link rel="stylesheet" href="{% static 'css/profile.css' %}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
+
+    <!-- jQuery UI CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+
+    <!-- jQuery and jQuery UI JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    <style>
+        .datepicker {
+            z-index: 99999 !important; /* Ensure the datepicker appears above other elements */
+        }
+    </style>
+
     <title>Profile</title>
   </head>
   <body>
@@ -122,9 +136,24 @@
 
                         <li class="dob">
                             <label for="user-dob">Date of birth</label>
-                            <!-- <input type="text" name="" id="user-desc" class="user-desc-input" placeholder="Description"> -->
-                            {{form.dob}}
+                            {{ form.dob }}
+                            <script>
+                                $(function() {
+                                    $("#id_dob").datepicker({
+                                        dateFormat: 'yy-mm-dd',  // Set the date format
+                                        changeMonth: true,
+                                        changeYear: true,
+                                        yearRange: "-100:+0"   // Allow selection of birthdates up to 100 years ago
+                                    });
+                                });
+                            </script>
                         </li>
+
+                        <!-- <li class="dob"> -->
+                            <!-- <label for="user-dob">Date of birth</label> -->
+                            <!-- <input type="text" name="" id="user-desc" class="user-desc-input" placeholder="Description"> -->
+                            <!-- {{form.dob}} -->
+                        <!-- </li> -->
 
                         <li class="desc">
                             <label for="user-desc">Address</label>

@@ -11,6 +11,8 @@ from .decorators import unauthenticated_user
 
 from django.contrib.auth.models import User
 
+from django.contrib.auth.views import PasswordResetView
+
 # Create your views here.
 
 
@@ -111,3 +113,10 @@ def police_complain(request):
 def forget_password(request):
     # return render(request, 'profileapp/forget-password.html')
     return HttpResponse ("This page is for forget password")
+
+
+# class CustomPasswordResetView(PasswordResetView):
+#     template_name = 'password_reset_form.html'
+#     email_template_name = 'password_reset_email.html'
+#     subject_template_name = 'password_reset_subject.txt'
+#     success_url = '/password_reset/done/'
