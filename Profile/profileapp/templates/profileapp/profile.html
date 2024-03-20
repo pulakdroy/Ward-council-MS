@@ -109,19 +109,19 @@
                             {{form.name}}
                         </li>
                         <li class="number">
-                            <label for="user-title">Phone number</label>
+                            <label for="user-number">Phone number</label>
                             <!-- <input type="text" name="" id="user-title" class="user-title-input" placeholder="Your Title"> -->
                             {{form.number}}
                         </li>
 
                         <li class="nid">
-                            <label for="user-title">NID</label>
+                            <label for="user-nid">NID</label>
                             <!-- <input type="text" name="" id="user-title" class="user-title-input" placeholder="Your Title"> -->
                             {{form.nid}}
                         </li>
 
                         <li class="dob">
-                            <label for="user-desc">Date of birth</label>
+                            <label for="user-dob">Date of birth</label>
                             <!-- <input type="text" name="" id="user-desc" class="user-desc-input" placeholder="Description"> -->
                             {{form.dob}}
                         </li>
@@ -140,13 +140,23 @@
             </form>
             
             <p class="profile-delete-button">Want to delete your account?? <a href="{% url 'delete_account' %}"> Delete </a></p>
+            
     </main>
 
     <script>
 
     var id_name = document.getElementById('id_name')
-    var id_title = document.getElementById('id_title')
+    var id_number = document.getElementById('id_number')
+    var id_nid = document.getElementById('id_nid')
+    var id_dob = document.getElementById('id_dob')
     var id_desc = document.getElementById('id_desc')
+
+
+    id_name.placeholder = 'Full name';
+    id_number.placeholder = 'Phone number';
+    id_nid.placeholder = 'NID number';
+    id_dob.placeholder = 'Date of birth';
+    id_desc.placeholder = 'Address';
 
 
     </script>

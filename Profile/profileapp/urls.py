@@ -15,4 +15,5 @@ urlpatterns =[
     path('police-service/', views.police_service, name='police_service'),
     path('police-complain/', views.police_complain, name='police_complain'),
     path('police/', views.police, name='police'),
+    path('forget-password/', views.forget_password, name='forget_password'),
 ]

@@ -12,6 +12,7 @@
 
     <link rel="stylesheet" href="{% static 'css/home.css' %}">
     
+    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
     <title>Home</title>
@@ -44,7 +45,7 @@
                     <a class="nav-link" href="{% url 'homepage' %}">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'login' %}">Profile</a>
+                    <a class="nav-link" href="{% url 'profile' %}">Profile</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="">Ward Council</a>
@@ -124,7 +125,7 @@
 
             <div class="user-content-container">
                 <p class="username">{{user.profile.name}}</p>
-                <p class="user-title">{{user.profile.title}}</p>
+                <p class="user-nid">{{user.profile.nid}}</p>
                 <p class="user-desc">{{user.profile.desc}}</p>
                 <div class="profile-edit-link-container">
                     <a href="{% url 'profile' %}">Edit</a>

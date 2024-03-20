@@ -13,6 +13,27 @@
 </head>
 <body>
 
+    <!-- Emergency Helpline Modal -->
+    <div class="modal fade" id="emergencyModal" tabindex="-1" role="dialog" aria-labelledby="emergencyModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="emergencyModalLabel">Emergency Helpline</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>In case of an emergency, dial 999 for immediate assistance.</p>
+                    <p>For direct call: <a href="tel:999">999</a></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="{% url 'homepage' %}">
             <img src="{% static 'images/logo.png' %}" width="120" height="60" class="d-inline-block align-top" alt="">
@@ -106,10 +127,18 @@
 
     </section>
 
+
     <!-- Bootstrap JS and jQuery scripts -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <script>
+        // Show emergency helpline modal on page load
+        $(document).ready(function(){
+            $('#emergencyModal').modal('show');
+        });
+    </script>
 
 </body>
 </html>

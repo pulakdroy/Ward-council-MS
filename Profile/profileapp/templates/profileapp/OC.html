@@ -29,7 +29,7 @@
                     <a class="nav-link" href="{% url 'homepage' %}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'login' %}">Profile</a>
+                    <a class="nav-link" href="{% url 'profile' %}">Profile</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="">Ward Council</a>
@@ -44,7 +44,7 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="">To Ward Councilor Office</a>
-                        <a class="dropdown-item" href="#">Police Station</a>
+                        <a class="dropdown-item" href="{% url 'police_complain' %}">Police Station</a>
                         <a class="dropdown-item" href="#">Admin</a>
                     </div>
                 </li>
@@ -90,12 +90,25 @@
  
     </header>
     
-    <!-- Councilor Profile Content Section -->
+    <!-- OC Profile Content Section -->
     <section class="profile-content">
+        <p>As the Officer in Charge at the Police station in Dhaka, he leads with a firm yet compassionate hand, ensuring that every case is meticulously investigated and every citizen is treated with respect and fairness.</p>
+
+        <p>With years of experience under his belt, Officer Holt has earned the trust and respect of his colleagues and the community alike. His calm demeanor and sharp intellect make him a formidable force against crime, and his commitment to serving and protecting is unwavering.</p>
+
+        <p>Outside of his duties, Officer Holt is known for his dry wit and penchant for sudoku puzzles. Don't let his serious facade fool you; he's always ready with a clever quip or a thoughtful piece of advice.</p>
+
+        <p>Whether you're in need of assistance or simply want to say hello, Officer Raymond Holt is here to serve. Feel free to contact him at the Police station or drop him an email at <a href="mailto:raymond.holt@police.com">raymond.holt@police.com</a>. Your safety and well-being are his top priorities.</p>
+
       
         
        
     </section>
+
+        <!-- Bootstrap JS and jQuery scripts -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
  
 

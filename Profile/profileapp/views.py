@@ -41,7 +41,10 @@ def profile(request):
 
 @login_required(login_url='login')
 def delete_account(request):
-    return HttpResponse('This is the confirmation page of delete-account.')
+    if request.method == 'POST':
+        request.user.delete()
+        return redirect('homepage')
+    return render(request, 'profileapp/delete_account.html')
 
 
 @unauthenticated_user
@@ -94,7 +97,7 @@ def councilor(request):
     return render(request, 'profileapp/councilor.html')
 
 def oc(request):
-    return render(request, 'profileapp/oc.html')
+    return render(request, 'profileapp/OC.html')
 
 def police_service(request):
     return render(request, 'profileapp/police-service.html')
@@ -105,3 +108,6 @@ def police(request):
 def police_complain(request):
     return render(request, 'profileapp/police-complain.html')
 
+def forget_password(request):
+    # return render(request, 'profileapp/forget-password.html')
+    return HttpResponse ("This page is for forget password")
