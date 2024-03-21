@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="{% static 'css/homepage.css' %}">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
     
     <!-- Bootstrap CSS link -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -93,6 +94,25 @@
             </ul>
         </div>
     </nav>
+
+    <!-- {% if messages %}
+    <div class="notification-container">
+        <div class="notification">
+
+            {% for message in messages %}
+            <p {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{message}}</p>
+            {% endfor %}
+
+            <img id='cross' src="{% static 'images/close.png' %}" width="15px" height="15px" alt="">
+        </div>
+    </div>
+    <script>
+        var cross = document.getElementById('cross')
+        cross.addEventListener('click', ()=> {
+            document.getElementsByClassName('notification-container')[0].style.display = 'none';
+        })
+    </script>
+    {% endif %} -->
 
 
     <section class="service">

@@ -45,6 +45,7 @@ def profile(request):
 def delete_account(request):
     if request.method == 'POST':
         request.user.delete()
+        messages.success(request, f'Your profile is deleted succesfully')
         return redirect('homepage')
     return render(request, 'profileapp/delete_account.html')
 
@@ -120,3 +121,21 @@ def forget_password(request):
 #     email_template_name = 'password_reset_email.html'
 #     subject_template_name = 'password_reset_subject.txt'
 #     success_url = '/password_reset/done/'
+
+
+
+from .models import Complaint
+
+@login_required(login_url='login')
+def submit_complaint(request):
+    if request.method == 'POST':
+        complaint = Complaint(
+            complainant_name=request.POST.get('complainant_name'),
+            contact_number=request.POST.get('contact_number'),
+            address=request.POST.get('address'),
+            subject=request.POST.get('subject'),
+            complaint_text=request.POST.get('complaint_text')
+        )
+        complaint.save()
+        return redirect('homepage')  # Redirect to a success page
+    return render(request, 'police-complain.html')  # Render the same page if not POST request
