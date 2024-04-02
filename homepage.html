@@ -8,6 +8,9 @@
     
     <!-- Bootstrap CSS link -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+
 </head>
 <body>
 
@@ -31,6 +34,8 @@
             </div>
         </div>
     </div>
+
+
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="homepage.html">
@@ -83,9 +88,9 @@
                         More
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="">Feedback</a>
-                        <a class="dropdown-item" href="#">About us</a>
-                        <a class="dropdown-item" href="#">Contact</a>
+                        <a class="dropdown-item" href="feedback.html">Feedback</a>
+                        <a class="dropdown-item" href="aboutus.html">About us</a>
+                     
                     </div>
                 </li>
             </ul>
@@ -94,36 +99,42 @@
 
 
     <section class="service">
-        <input type="text" id="searchInput" oninput="filterPeople()" placeholder="Search">
-        <div id="searchNote"></div>
-
-        <div class="people-container">
+        <div class="left-section">
             <!-- Ward councilor profile -->
             <div class="people" id="councilor">
                 <a href="councilor.html">
                     <img src="images/wardcouncilor.jpg" alt="Council">
-                    <h2>Kevin spacey</h2>
+                    <h2>Kevin Spacey</h2>
                     <p>Ward Councilor</p>
-
                 </a>
             </div>
-        
-            <!-- Office in Change -->
+            
+
+            
+            <!-- Office in Charge -->
             <div class="people" id="OC">
                 <a href="OC.html">
                     <img src="images/oc.jpg" alt="OC">
                     <h2>Raymond Holt</h2>
                     <p>Office in charge</p>
-
                 </a>
             </div>
-        
- 
-        
         </div>
-
-
+    
+        <div class="right-section">
+            <!-- Calendar -->
+            <div id="calendar"></div>
+            <!-- Important dates -->
+            <div id="important-dates">
+                <h3>Important Dates</h3>
+                <ul id="important-dates-list">
+                    <!-- List of important dates -->
+                </ul>
+            </div>
+        </div>
+        
     </section>
+    
 
 
     <!-- Bootstrap JS and jQuery scripts -->
@@ -131,12 +142,75 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
-    <script>
-        // Show emergency helpline modal on page load
-        $(document).ready(function(){
-            $('#emergencyModal').modal('show');
-        });
-    </script>
+<!-- Flatpickr script -->
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
+<!-- JavaScript code -->
+<script>
+    // Show emergency helpline modal on page load
+    $(document).ready(function(){
+        $('#emergencyModal').modal('show');
+    });
+
+    // Define government holidays or important days of the month
+    const importantDates = {
+        "January 1": "New Years Day(Danish holiday)",
+        "February 21": "Martyr’s Day & International Mother Language Day",
+        "February 26": "Shab-e-Barat*",
+        "March 17": "Birthday of the Father of the Nation & National Childrens Day",
+        "March 26": "Independence Day of Bangladesh",
+        "March 29": "Good Friday (Danish holiday)",
+        "April 1": "Easter Monday (Danish holiday)",
+        "April 5": "Jumatul Bida",
+        "April 7": "Shab-e-Qadar*",
+        "April 10": "Eid-ul-Fitr*",
+        "April 11": "Eid-ul-Fitr*",
+        "April 12": "Eid-ul-Fitr*",
+        "April 14": "Bangla New Year (Noboborsho) ",
+        "May 1": "May Day",
+        "May 9": "Ascension Day (Danish holiday)",
+        "May 22": "Buddha Purnima",
+        "June 16": "Eid-ul-Azha*",
+        "June 17": "Eid-ul-Azha*",
+        "June 18": "Eid-ul-Azha*",
+        "July 17": "Ashura*",
+        "August 15": "National Mourning Day",
+        "August 26": "Jonmastomi",
+        "September 16": "Eid-e-Miladunnabi*",
+        "October 13": "Durgapuja",
+        "December 16": "Victory Day",
+        "December 25": "Christmas Day",
+        "December 26": "Christmas Day",
+
+    };
+
+    // Function to generate the list of important dates for the current month
+    function generateImportantDates() {
+        const today = new Date();
+        const currentMonth = today.toLocaleString('default', { month: 'long' });
+        const importantDatesList = document.getElementById('important-dates-list');
+        
+        for (const date in importantDates) {
+            if (date.startsWith(currentMonth)) {
+                const reminderItem = document.createElement('li');
+                reminderItem.textContent = `${date}: ${importantDates[date]}`;
+                importantDatesList.appendChild(reminderItem);
+            }
+        }
+    }
+
+    // Call the function to generate important dates when the page loads
+    document.addEventListener('DOMContentLoaded', function() {
+        generateImportantDates();
+
+        // Initialize Flatpickr
+        flatpickr("#calendar", {
+            inline: true,
+            dateFormat: "Y-m-d",
+        });
+    });
+
+
+</script>
 </body>
 </html>

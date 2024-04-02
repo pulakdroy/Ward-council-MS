@@ -3,11 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Police Complain</title>
-    <link rel="stylesheet" href="police-service.css">
+    <title>About us</title>
+    <link rel="stylesheet" href="aboutus.css">
     
     <!-- Bootstrap CSS link -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+   
+
 </head>
 <body>
 
@@ -42,7 +46,7 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="">To Ward Councilor Office</a>
-                        <a class="dropdown-item" href="#">Police Station</a>
+                        <a class="dropdown-item" href="police-complain.html">Police Station</a>
                         <a class="dropdown-item" href="#">Admin</a>
                     </div>
                 </li>
@@ -52,7 +56,7 @@
                         Forms
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="">Councilor Office forms</a>
+                        <a class="dropdown-item" href="">To Ward Councilor Office</a>
                         <a class="dropdown-item" href="police-service.html">Police forms</a>
                     </div>
                 </li>
@@ -64,90 +68,69 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="feedback.html">Feedback</a>
                         <a class="dropdown-item" href="aboutus.html">About us</a>
-                        
+                       
                     </div>
                 </li>
             </ul>
         </div>
     </nav>
 
-    <header>
-        <h1>Submit Complaint to Police</h1>
-    </header>
+    <br>
+    <br>
+    <br>
+    <br>
 
     <div class="container">
-        <main class="form">
-            <!-- <header>
-                <h1>Submit Complaint to Police</h1>
-            </header> -->
-            <form id="complaintForm" action="#" method="POST">
-                <label for="complainant_name">Your Name:</label>
-                <input type="text" id="complainant_name" name="complainant_name" required>
-                <br>
-                <label for="contact_number">Contact Number:</label>
-                <input type="tel" id="contact_number" name="contact_number" pattern="[0-9]{10}" required>
-                <br>
-                <label for="address">Address:</label>
-                <input type="text" id="address" name="address" required>
-                <br>
-                <label for="subject">Subject:</label>
-                <input type="text" id="subject" name="subject" required>
-                <br>
-                <label for="complaint_text">Complaint:</label>
-                <textarea id="complaint_text" name="complaint_text" required></textarea>
-                <br>
-                <button type="submit">Submit</button>
-            </form>
-        </main>
-    
-        <aside class="emergency">
-            <h2>Emergency Helpline</h2>
-            <p>Call <strong>999</strong> for immediate assistance.</p>
-            <p>For direct call: <a href="tel:999">999</a></p>
-        </aside>
+        <section class="profile">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="\images\pulak.jpg" class="img-fluid rounded-circle" alt="Profile 1">
+                </div>
+                <div class="col-md-8">
+                    <h2>Pulak Deb Roy</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra urna in velit varius, id rutrum magna tempor. Donec fermentum quam vel mi consequat, sed consequat lorem dignissim. Ut tristique, velit vel tristique dictum, nisl arcu lobortis velit, eu ultrices risus nulla nec tortor.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="profile">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="\images\kanak.jpg" class="img-fluid rounded-circle" alt="Profile 2">
+                </div>
+                <div class="col-md-8">
+                    <h2>Kanak Roy</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra urna in velit varius, id rutrum magna tempor. Donec fermentum quam vel mi consequat, sed consequat lorem dignissim. Ut tristique, velit vel tristique dictum, nisl arcu lobortis velit, eu ultrices risus nulla nec tortor.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="profile">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="\images\linkon.jpg" class="img-fluid rounded-circle" alt="Profile 3">
+                </div>
+                <div class="col-md-8">
+                    <h2>Linkon Dhar</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra urna in velit varius, id rutrum magna tempor. Donec fermentum quam vel mi consequat, sed consequat lorem dignissim. Ut tristique, velit vel tristique dictum, nisl arcu lobortis velit, eu ultrices risus nulla nec tortor.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="profile">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="\images\sium.jpg" class="img-fluid rounded-circle" alt="Profile 3">
+                </div>
+                <div class="col-md-8">
+                    <h2>Sium Ibn Akhter</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed viverra urna in velit varius, id rutrum magna tempor. Donec fermentum quam vel mi consequat, sed consequat lorem dignissim. Ut tristique, velit vel tristique dictum, nisl arcu lobortis velit, eu ultrices risus nulla nec tortor.</p>
+                </div>
+            </div>
+        </section>
     </div>
 
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <footer>
-        <p>&copy; 2024 All Rights Reserved</p>
-    </footer>
-
-
-
-
-    <!-- Bootstrap JS and jQuery scripts -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
-
-    <!-- Additional JavaScript for form validation and submission -->
-    <script>
-        // JavaScript code for form validation and submission
-        document.getElementById('complaintForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent the default form submission
-            // Validate the form fields here
-            // You can use JavaScript or a library like jQuery for validation
-            // If validation passes, you can submit the form using AJAX
-            // Example:
-            // $.ajax({
-            //     url: $(this).attr('action'),
-            //     type: $(this).attr('method'),
-            //     data: $(this).serialize(),
-            //     success: function(response) {
-            //         // Handle successful submission
-            //     },
-            //     error: function(xhr, status, error) {
-            //         // Handle errors
-            //     }
-            // });
-        });
-    </script>
-    
 
 
 
