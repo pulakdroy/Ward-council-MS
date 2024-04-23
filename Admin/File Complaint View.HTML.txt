@@ -1,0 +1,110 @@
+File Complaint View (views.py):
+from django.shortcuts import render, redirect
+from .models import Complaint
+from django.contrib.auth.decorators import login_required
+
+@login_required
+def file_complaint(request):
+    if request.method == 'POST':
+        
+        complaint = Complaint.objects.create(
+            user=request.user,
+            complaint_type=request.POST['complaint_type'],
+            complaint_description=request.POST['complaint_description']
+        )
+        
+        return redirect('home')  
+    else:
+        return render(request, 'frontend.html')  
+
+
+
+
+New Code:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Ward Community Management System</title>
+    <link rel="stylesheet" href="admin.css">
+    <!-- Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Admin Dashboard</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Admin Features Section -->
+    <section class="admin-features">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">User Information</h5>
+                            <p class="card-text">Check all the information about every user.</p>
+                            <a href="#" class="btn btn-primary">View Users</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Ward Councilor Profiles</h5>
+                            <p class="card-text">Access ward councilor profiles.</p>
+                            <a href="#" class="btn btn-primary">View Councilors</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Police Station Profiles</h5>
+                            <p class="card-text">Access police station profiles.</p>
+                            <a href="#" class="btn btn-primary">View Police Stations</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Delete/Block Users</h5>
+                            <p class="card-text">Delete or block any users from the system.</p>
+                            <a href="#" class="btn btn-primary">Manage Users</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Criminal Database</h5>
+                            <p class="card-text">Access the criminal database.</p>
+                            <a href="#" class="btn btn-primary">View Criminal Database</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS scripts -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

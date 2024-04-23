@@ -1,0 +1,41 @@
+<!-- admin_panel.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+</head>
+<body>
+    <h1>Welcome to Admin Panel</h1>
+    
+    <h2>User Information</h2>
+    <ul>
+        {% for user_profile in user_profiles %}
+        <li>{{ user_profile.name }} - {{ user_profile.contact_number }} - {{ user_profile.address }} <a href="{% url 'delete_user' user_profile.id %}">Delete</a></li>
+        {% endfor %}
+    </ul>
+    
+    <h2>Ward Councilor Profiles</h2>
+    <ul>
+        {% for ward_councilor in ward_councilors %}
+        <li>{{ ward_councilor.name }}</li>
+        {% endfor %}
+    </ul>
+    
+    <h2>Police Station Profiles</h2>
+    <ul>
+        {% for police_station in police_stations %}
+        <li>{{ police_station.name }}</li>
+        {% endfor %}
+    </ul>
+    
+    <h2>Criminal Database</h2>
+    <ul>
+        {% for criminal in criminals %}
+        <li>{{ criminal.name }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
