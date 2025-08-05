@@ -1,1 +1,1 @@
-"Ward Council Management System" was created for our System Analysis and Design(CSE471) course. 
+"Ward Council Management System" was created for our System Analysis and Design(CSE471) course using the Django framework. 
